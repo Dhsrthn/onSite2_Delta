@@ -1,0 +1,162 @@
+body{
+  max-width: 100%;
+  max-height: 100%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sidenav{
+  height: 100%;
+  width: 0;
+}
+
+.content{
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.container{
+  position: relative;
+}
+
+#backgroundText{
+  background-color: rgb(39, 39, 39);
+  color: rgba(255, 255, 255,0.5);
+  border-radius: 1.5vmin;
+  width: 60vw;
+  height: 40vh;
+  overflow-y: visible;
+  padding: 3.5vmin;
+  font-size: 2vmin;
+  font-family: 'Courier New', Courier, monospace;
+  border: 0.1vmin solid black;
+}
+
+
+
+.active{
+  position: relative;
+}
+
+.active::after{
+  content: '';
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 2px;
+  height: 1.2em; 
+  background-color: white;
+  animation: cursorAnimation 1s infinite;
+}
+
+@keyframes cursorAnimation {
+  0%, 100% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+.correct{
+  color: lawngreen;
+}
+
+.incorrect{
+  color: red;;
+}
+#sidenav{
+  height:100%;
+  width:0;
+  position:fixed;
+  z-index:1;
+  top:0;
+  left:0;
+  background-color: rgb(87 90 113 / 70%);
+  overflow-x:hidden;
+  transition:0.2s;
+  padding-top:1vmin;
+}
+#opener{
+  cursor: pointer;
+  position:fixed;
+  top:0;
+  left:0;
+  height:5vmin;
+  width:5vmin;
+  background-image: url('menu.png');
+  background-size: 100%;
+}
+
+.mysidenav .closebtn {
+  position:relative;
+  top: 0;
+  left: 60vmin;
+  font-size: 5vmin;
+  color:black;
+}
+
+.buttons{
+  width: 60vw;
+  margin-top: 1vmin;
+  display: flex;
+  justify-content: space-evenly;
+}
+#start{
+  width: 15vw;
+  height: 4vh;
+  border: none;
+  border-radius: 0.7vmin;
+  outline: none;
+  background-color: rgb(129, 129, 129);
+  font-size: 2vmin;
+}
+#save{
+  width: 15vw;
+  font-size: 2vmin;
+  height: 4vh;
+  border: none;
+  border-radius: 0.7vmin;
+  outline: none;
+  background-color: rgb(129, 129, 129);
+}
+#new{
+  width: 15vw;
+  height: 4vh;
+  border: none;
+  border-radius: 0.7vmin;
+  outline: none;
+  background-color: rgb(129, 129, 129);
+  font-size: 2vmin;
+}
+
+#save:hover{
+  background-color: rgb(182, 182, 182);
+}
+#start:hover{
+  background-color: rgb(182, 182, 182);
+}
+#new:hover{
+  background-color: rgb(182, 182, 182);
+}
+
+#timer{
+  width: 80vw;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.navitems{
+  font-size:5vmin;
+  color: #31b2da;
+  font-family: 'Lucida Sans';
+  text-shadow: 0.1vmin 0.1vmin black;
+  text-align: center;
+  margin-top: 0.5vmin;
+}

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="index.css">
+  <script src='typeMonkey.js' defer ></script>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <title>typeMonkey</title>
+</head>
+<body>
+    <div id="sidenav" class="mysidenav">
+      <a href="javascript:void(0)" id="closebutton" class="closebtn" onclick="closeNav()">&times;</a>
+    </div>
+      <span onclick="openNav()" id="opener"> </span>  
+      <div class="content">
+        <div class="container"> 
+          <div id="backgroundText"></div>
+          </div>
+          <div class="buttons">
+            <button id="start" >Start</button>
+            <button id="save">Save </button>
+            <button id="new" onclick="runNew()"> New</button>
+          </div>
+        <div id="timer">
+        <h2 id="time">Time: 01:00</h2>
+        <h2 id="currentWPM">WPM: 0.00</h2>
+        <h2 id="accuracy">Accuracy:0.00 </h2>
+        <h2 id="prevbest">Previous: </h2>
+      </div>
+      </div>
+      
+      <div class="sidenav"></div>
+</body>
+</html>
