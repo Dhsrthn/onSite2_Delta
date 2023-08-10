@@ -14,6 +14,7 @@ let paragraph
 let object={}
 let wordCount=0
 let correct=0,incorrect=0,uncorrected=0;
+let positions=[]
 
 function display(paragraph) {
   console.log(object)
@@ -46,6 +47,7 @@ async function runNew() {
   correct=0
   incorrect=0
   uncorrected=0
+  positions=[]
   startbutton.onclick=startfunction
 }
 
@@ -131,8 +133,16 @@ function timer(t) {
 
   countDown = setInterval(() => {
       t--
-      
+      positions.push(curr)
       displayTime(t)
+      if(object.positions.length>0){
+        const ghost=document.getElementsByClassName('ghost')
+        divArray.forEach(element => {
+          element.classList.remove('ghost');
+        });
+        divArray[object.positions[60-t]].classList.add('ghost')
+
+      }
   }, 1000)
 
   function displayTime(t) {
@@ -187,6 +197,7 @@ function getSavedArray(){
 }
 
 function saveState(){
+  object.positions=positions
   savedArray.push(object)
   localStorage.setItem('hai',JSON.stringify(savedArray))
   alert('Saved in history')
@@ -218,6 +229,7 @@ function displaySaved(){
         wordCount=0
         correct=0
         incorrect=0
+        positions=[]
         uncorrected=0
         startbutton.onclick=startfunction
         if(c!=1){
