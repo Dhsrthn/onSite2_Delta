@@ -228,7 +228,7 @@ function displaySaved() {
       saved.style.border = '0.1vmin solid black'
       saved.style.borderRadius = '0.5vmin'
       for (let j = 0; j < 15; j++) {
-        saved.innerHTML += `${savedArray[0].paragraph[j]}`
+        saved.innerHTML += `${savedArray[i].paragraph[j]}`
       }
       document.getElementById('sidenav').appendChild(saved)
       saved.addEventListener('click', function () {
