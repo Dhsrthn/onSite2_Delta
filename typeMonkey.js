@@ -152,6 +152,9 @@ function timer(t) {
       }else{
         wpm=((((curr+1)/5)-uncorrected))
       }
+      if(wpm<0){
+          wpm=0
+      }
       let sec = Math.floor(t % 60)
       let min = Math.floor(t / 60)
       timeH.innerHTML = `Time: ${min < 10 ? "0" : ""}${min}:${sec < 10 ? "0" : ""}${sec}`
