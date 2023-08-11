@@ -172,7 +172,6 @@ body{
   right: 0;
   width: 2px;
   height: 1.2em; 
-  background-color: rgb(158, 36, 14);
-  animation: cursorAnimation 1s infinite;
+  background-color: rgb(0, 238, 255);
 }
 
